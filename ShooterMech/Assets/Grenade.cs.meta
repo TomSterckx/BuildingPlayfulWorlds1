@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 70e10c5d1c894a2409cb7329efa729d8
+timeCreated: 1519052267
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - explosionEffect: {instanceID: 0}
+  - audioclip: {fileID: 8300000, guid: d5b8cd8c373a10d46a66c6acdb0bda89, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
