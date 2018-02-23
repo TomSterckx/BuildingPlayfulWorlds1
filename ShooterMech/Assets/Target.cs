@@ -3,6 +3,7 @@
 public class Target : MonoBehaviour {
 
     public float health = 50f;
+    public GameObject newTarget;
 
     public void TakeDamage(float amount)
     {
@@ -16,6 +17,8 @@ public class Target : MonoBehaviour {
     void Die ()
     {
         Destroy(gameObject);
+        Instantiate(newTarget, transform.position, transform.rotation);
+
     }
 }
 

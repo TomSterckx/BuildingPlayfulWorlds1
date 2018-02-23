@@ -10,17 +10,22 @@ public class Gun : MonoBehaviour {
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
     public float impactForce = 30f;
+    public float Ammo = 10;
+    public float fireRate = 3f;
+    public float nextTimeToFire = 0f; 
 
     void Update () {
-		if (Input.GetButtonDown("Fire1"))
+		if (Input.GetButton("Fire1") && Ammo !=0 && Time.time>= nextTimeToFire)
         {
+            nextTimeToFire = Time.time + 1f / fireRate;
             Shoot();
+            Ammo -= 1;
         }
 	}
 
     void Shoot () {
         muzzleFlash.Play();
-
+        
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
