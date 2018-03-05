@@ -5,7 +5,7 @@ using UnityEngine;
 public class Grenade : MonoBehaviour {
 
     public float delay = 3f;
-
+    public float damage = 50f;
     float countdown;
     bool hasExploded = false;
     public GameObject explosionEffect;
@@ -37,10 +37,19 @@ public class Grenade : MonoBehaviour {
 
         foreach (Collider nearbyObject in colliders)
         {
+            float multiplier = Vector3.Distance(transform.position, nearbyObject.transform.position);
             Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
             if (rb != null)
             {
                 rb.AddExplosionForce(explosionForce, transform.position, radius);
+            }
+            Target target = nearbyObject.transform.GetComponent<Target>();
+            
+            if (target != null)
+            {
+                target.TakeDamage(damage / multiplier);
+                Debug.Log(damage / multiplier);
+                
             }
         }
         

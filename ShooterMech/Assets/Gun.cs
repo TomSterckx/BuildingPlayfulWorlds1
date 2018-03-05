@@ -12,11 +12,12 @@ public class Gun : MonoBehaviour {
     public GameObject impactEffect;
     public float impactForce = 30f;
     public int maxAmmo = 10;
-    private int currentAmmo;
+    public int currentAmmo;
     private bool isReloading = false;
     public float reloadTime = 2f;
     public float fireRate = 3f;
     public float nextTimeToFire = 0f;
+    public AudioClip audioclip;
 
     private void Start()
     {
@@ -56,7 +57,7 @@ public class Gun : MonoBehaviour {
 
     void Shoot () {
         muzzleFlash.Play();
-
+        AudioSource.PlayClipAtPoint(audioclip, transform.position);
         currentAmmo --; 
 
         RaycastHit hit;
