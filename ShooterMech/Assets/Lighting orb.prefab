@@ -238,6 +238,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1411422906881948, guid: 6ea8b92e064f3a642b50f20ab570ad33, type: 2}
+  ground:
+    serializedVersion: 2
+    m_Bits: 16
   rayCastRange: 2.85
 --- !u!135 &135436478011426334
 SphereCollider:
