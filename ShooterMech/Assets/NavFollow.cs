@@ -9,12 +9,16 @@ public class NavFollow : MonoBehaviour {
 
     NavMeshAgent _navMeshAgent;
     private GameObject player;
-
+    public float damage = 1f;
+    public float attackRange = 1.0f;
+    private Health health;
+   
     // Use this for initialization
     void Start()
     {
         _navMeshAgent = this.GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
+        health = player.GetComponent<Health>();
 
     }
     private void Update()
@@ -34,6 +38,14 @@ public class NavFollow : MonoBehaviour {
         {
             Vector3 targetVector = player.transform.position;
             _navMeshAgent.SetDestination(targetVector);
+            
+
+            float distance = Vector3.Distance(targetVector, transform.position);
+            if (distance <= attackRange)
+            { //Kill
+                
+                health.TakeDamage(damage);
+            }
         }
     }
 }

@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 54741651322189788}
   - component: {fileID: 135436478011426334}
   - component: {fileID: 114393937703408328}
+  - component: {fileID: 114930473007446254}
   m_Layer: 0
   m_Name: Lighting orb
   m_TagString: Untagged
@@ -242,6 +243,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 16
   rayCastRange: 2.85
+--- !u!114 &114930473007446254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1445924874555312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdcb02f2801eba41b991a3e7cb12f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
 --- !u!135 &135436478011426334
 SphereCollider:
   m_ObjectHideFlags: 1
