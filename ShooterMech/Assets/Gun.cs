@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Gun : MonoBehaviour {
 
     public float damage = 10f;
     public float range = 100f;
-
+    Text ammoText;
     public Camera fpsCam;
 
     public ParticleSystem muzzleFlash;
@@ -23,6 +24,7 @@ public class Gun : MonoBehaviour {
     {
         if (currentAmmo == -1)
         { currentAmmo = maxAmmo; }
+        ammoText.text = currentAmmo.ToString();        
     }
 
     void Update () {
