@@ -9,7 +9,7 @@ public class Grenade : MonoBehaviour {
     float countdown;
     bool hasExploded = false;
     public GameObject explosionEffect;
-    public float radius = 5f;
+    public float radius = 30f;
     public float explosionForce = 700f;
     public AudioClip audioclip;
 
@@ -47,8 +47,8 @@ public class Grenade : MonoBehaviour {
             
             if (target != null)
             {
-                target.TakeDamage(damage / multiplier);
-                Debug.Log(damage / multiplier);
+                target.TakeDamage(5 * damage / multiplier);
+              
                 
             }
         }

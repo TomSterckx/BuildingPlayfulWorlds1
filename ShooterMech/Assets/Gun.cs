@@ -6,7 +6,7 @@ public class Gun : MonoBehaviour {
 
     public float damage = 10f;
     public float range = 100f;
-    Text ammoText;
+    
     public Camera fpsCam;
 
     public ParticleSystem muzzleFlash;
@@ -19,12 +19,12 @@ public class Gun : MonoBehaviour {
     public float fireRate = 3f;
     public float nextTimeToFire = 0f;
     public AudioClip audioclip;
-
+    public Animator animator;
     private void Start()
     {
         if (currentAmmo == -1)
         { currentAmmo = maxAmmo; }
-        ammoText.text = currentAmmo.ToString();        
+             
     }
 
     void Update () {
@@ -52,9 +52,12 @@ public class Gun : MonoBehaviour {
     {
         isReloading = true;
         Debug.Log("Reloading..");
+        animator.SetBool("Reloading", true);
         yield return new WaitForSeconds(reloadTime);
         currentAmmo = maxAmmo;
+        animator.SetBool("Reloading", false);
         isReloading = false;
+        
     }
 
     void Shoot () {
