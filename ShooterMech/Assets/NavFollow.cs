@@ -13,6 +13,8 @@ public class NavFollow : MonoBehaviour {
     public float attackRange = 1.0f;
     public float attackTime = 20f;
     private Health health;
+    public float nextTimeToAttack= 0f;
+    public float attackRate = 0.5f;
    
     // Use this for initialization
     void Start()
@@ -42,16 +44,16 @@ public class NavFollow : MonoBehaviour {
             
 
             float distance = Vector3.Distance(targetVector, transform.position);
-            if (distance <= attackRange)
+            if (distance <= attackRange && Time.time >= nextTimeToAttack)
             { //Kill
-                StartCoroutine(Attack());
-                
+                Attack();
+                nextTimeToAttack = Time.time + 1f / attackRate;
             }
         }
     }
-    IEnumerator Attack()
+    void Attack()
     {
         health.TakeDamage(damage);
-        yield return new WaitForSeconds(attackTime);
+       
     }
 }
