@@ -16,7 +16,7 @@ public class CollideSpawn : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         Instantiate(enemy, transform.position, Quaternion.identity);
-        Debug.Log("Hakuna Matata");
+     
         Destroy(gameObject);
     }
 
