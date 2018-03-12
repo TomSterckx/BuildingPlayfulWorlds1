@@ -9,8 +9,9 @@ public class NavFollow : MonoBehaviour {
 
     NavMeshAgent _navMeshAgent;
     private GameObject player;
-    public float damage = 1f;
+    public float damage = 50f;
     public float attackRange = 1.0f;
+    public float attackTime = 20f;
     private Health health;
    
     // Use this for initialization
@@ -43,9 +44,14 @@ public class NavFollow : MonoBehaviour {
             float distance = Vector3.Distance(targetVector, transform.position);
             if (distance <= attackRange)
             { //Kill
+                StartCoroutine(Attack());
                 
-                health.TakeDamage(damage);
             }
         }
+    }
+    IEnumerator Attack()
+    {
+        health.TakeDamage(damage);
+        yield return new WaitForSeconds(attackTime);
     }
 }
