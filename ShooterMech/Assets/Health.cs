@@ -9,8 +9,13 @@ public class Health : MonoBehaviour {
 
     public void TakeDamage(float amount)
     {
-        health -= amount;
-        if (health <= 0f)
+        
+        if (health > 0f)
+        {
+            
+            health -= amount;
+        }
+        else
         {
             Die();
         }
@@ -19,7 +24,8 @@ public class Health : MonoBehaviour {
     void Die()
     {
         Debug.Log("Rip mate");
-
+        FindObjectOfType<GameManager>().EndGame();
+     
 
     }
 }

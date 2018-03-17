@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _destination: {fileID: 4911269890376900, guid: 0178d7bfeb4b4344a8f2ba419a430799,
     type: 2}
-  damage: 10
+  damage: 50
   attackRange: 1.5
   attackTime: 200
   nextTimeToAttack: 0
