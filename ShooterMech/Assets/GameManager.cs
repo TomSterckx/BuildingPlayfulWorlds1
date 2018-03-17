@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     bool gameHasEnded = false;
-    public float 1f;
+    public float delay =1f;
 
     public void EndGame()
     {
