@@ -1894,6 +1894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 1
+  amountBalls: 0
 --- !u!1001 &497231642
 Prefab:
   m_ObjectHideFlags: 0
@@ -3121,9 +3122,10 @@ GameObject:
   - component: {fileID: 1177091846}
   - component: {fileID: 1177091845}
   - component: {fileID: 1177091844}
+  - component: {fileID: 1177091849}
   m_Layer: 0
   m_Name: EndBall (2)
-  m_TagString: Untagged
+  m_TagString: Balls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3243,6 +3245,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1177091842}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1177091849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1177091842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdcb02f2801eba41b991a3e7cb12f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
 --- !u!1 &1180411563
 GameObject:
   m_ObjectHideFlags: 0
@@ -4047,9 +4061,10 @@ GameObject:
   - component: {fileID: 1438316744}
   - component: {fileID: 1438316743}
   - component: {fileID: 1438316742}
+  - component: {fileID: 1438316747}
   m_Layer: 0
   m_Name: EndBall (1)
-  m_TagString: Untagged
+  m_TagString: Balls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4169,6 +4184,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1438316740}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1438316747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1438316740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdcb02f2801eba41b991a3e7cb12f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
 --- !u!1 &1469128959 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1361876622687018, guid: 0178d7bfeb4b4344a8f2ba419a430799,
@@ -5234,9 +5261,10 @@ GameObject:
   - component: {fileID: 1879236788}
   - component: {fileID: 1879236792}
   - component: {fileID: 1879236791}
+  - component: {fileID: 1879236793}
   m_Layer: 0
   m_Name: EndBall
-  m_TagString: Untagged
+  m_TagString: Balls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5356,6 +5384,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1879236793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1879236786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdcb02f2801eba41b991a3e7cb12f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
 --- !u!1 &1948062733
 GameObject:
   m_ObjectHideFlags: 0

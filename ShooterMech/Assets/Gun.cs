@@ -70,18 +70,21 @@ public class Gun : MonoBehaviour {
         {
             Debug.Log(hit.transform.name);
 
-            Target target = hit.transform.GetComponent<Target>();
-            if (target != null)
+            Target target1 = hit.transform.GetComponent<Target>();
+            if (target1 != null)
             {
-                target.TakeDamage(damage);
+                target1.TakeDamage(damage);
                 GameObject ImpactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
                 Destroy(ImpactGO, 2f);
             }
-
+          
             if (hit.rigidbody != null)
             {
                 hit.rigidbody.AddForce(-hit.normal * impactForce);
             }
+     
+
+            
         }
     }
 }

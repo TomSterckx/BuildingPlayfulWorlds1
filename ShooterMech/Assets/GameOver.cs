@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 
-public class Target : MonoBehaviour {
+public class GameOver : MonoBehaviour
+{
 
     public float health = 50f;
-   
+
+
     public void TakeDamage(float amount)
     {
         health -= amount;
@@ -13,14 +15,11 @@ public class Target : MonoBehaviour {
         }
     }
 
-    void Die ()
-    {   if (gameObject.tag == "Balls")
-        {
-            FindObjectOfType<GameManager>().amountBalls++;
-        }
+    void Die()
+    {
         Destroy(gameObject);
+        FindObjectOfType<GameManager>().amountBalls = +1;
 
-        
 
     }
 }
