@@ -484,7 +484,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4293738557445358, guid: e1f20a9fb9780224cab1cefa3100128d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 227.9
+      value: 87.899994
       objectReference: {fileID: 0}
     - target: {fileID: 4293738557445358, guid: e1f20a9fb9780224cab1cefa3100128d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3363,7 +3363,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4293738557445358, guid: e1f20a9fb9780224cab1cefa3100128d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 207
+      value: 67
       objectReference: {fileID: 0}
     - target: {fileID: 4293738557445358, guid: e1f20a9fb9780224cab1cefa3100128d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5641,7 +5641,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1986891792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 250, y: 25, z: 250.41672}
+  m_LocalPosition: {x: 250, y: 25, z: 201.9}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5658,6 +5658,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 231d0a29eca2bb04d9d2c47db298796c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numEnemies: 5
+  Enemyprefab: {fileID: 1411422906881948, guid: 6ea8b92e064f3a642b50f20ab570ad33,
+    type: 2}
+  center: {x: 250, y: 0, z: 250}
+  size: {x: 5, y: 5, z: 5}
 --- !u!1001 &2000750131
 Prefab:
   m_ObjectHideFlags: 0
