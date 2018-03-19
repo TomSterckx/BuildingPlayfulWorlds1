@@ -17,7 +17,7 @@ public class AntiGravity : MonoBehaviour {
 
     void upwardsForce()
     {
-        rb.AddForce(0, 5, 0);
+        rb.AddForce(0, 7, 0);
     }
 }
 

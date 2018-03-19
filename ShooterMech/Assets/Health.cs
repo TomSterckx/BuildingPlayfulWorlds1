@@ -8,17 +8,16 @@ public class Health : MonoBehaviour {
 
 
     public void TakeDamage(float amount)
-    {
-        
-        if (health > 0f)
+    {   if (health > 0)
         {
-            
             health -= amount;
         }
-        else
+        if (health <= 0f)
         {
+
             Die();
         }
+
     }
 
     void Die()
