@@ -17,7 +17,7 @@ public class EnemySpawner : MonoBehaviour
         {
             for (int i = 0; i < numEnemies; i++)
             {
-                Vector3 pos = center + new Vector3(Random.Range(-size.x , size.x ), 3, Random.Range(-size.z , size.z ));
+                Vector3 pos = center + new Vector3(Random.Range(-250 , 250 ), 50 , Random.Range(-250 , 250 ));
                 Instantiate(Lightningorbprefab, pos, Quaternion.identity);
             }
             Debug.Log("TRIGGERED2");
