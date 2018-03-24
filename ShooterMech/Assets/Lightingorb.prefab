@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 114393937703408328}
   - component: {fileID: 114930473007446254}
   m_Layer: 0
-  m_Name: Lighting orb
+  m_Name: Lightingorb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -17,18 +17,19 @@ public class GameManager : MonoBehaviour {
 
     public void EndGame()
     {
-        if (gameHasEnded = false)
+        if (gameHasEnded == false)
         {
 
         }
         gameHasEnded = true;
-        Debug.Log("Game Over");
+        
         Invoke("Restart", delay);
     }
 
     void Restart()
     {
         SceneManager.LoadScene("StartMenu");
+        Debug.Log("Game Over");
     }
 
 }
