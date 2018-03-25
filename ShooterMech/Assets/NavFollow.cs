@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NavFollow : MonoBehaviour {
+public class NavFollow : MonoBehaviour
+{
     [SerializeField]
     Transform _destination;
 
@@ -13,9 +14,13 @@ public class NavFollow : MonoBehaviour {
     public float attackRange = 1.0f;
     public float attackTime = 20f;
     private Health health;
-    public float nextTimeToAttack= 0f;
+    public float nextTimeToAttack = 0f;
     public float attackRate = 0.5f;
-   
+    public GameObject explosionEffect;
+    public AudioClip audioclip;
+    public float radius = 30f;
+
+
     // Use this for initialization
     void Start()
     {
@@ -37,23 +42,42 @@ public class NavFollow : MonoBehaviour {
     }
     private void SetDestination()
     {
-        if(_destination != null)
+        if (_destination != null)
         {
             Vector3 targetVector = player.transform.position;
             _navMeshAgent.SetDestination(targetVector);
-            
+
 
             float distance = Vector3.Distance(targetVector, transform.position);
-            if (distance <= attackRange && Time.time >= nextTimeToAttack)
+            if (distance <= attackRange )
             { //Kill
-                Attack();
-                nextTimeToAttack = Time.time + 1f / attackRate;
+
+                Explode();
+
             }
         }
     }
     void Attack()
     {
         health.TakeDamage(damage);
-       
+
+    }
+    void Explode()
+    {
+
+        Instantiate(explosionEffect, transform.position, transform.rotation);
+
+        AudioSource.PlayClipAtPoint(audioclip, transform.position);
+
+        
+        
+        health.TakeDamage(damage );
+        Destroy(gameObject);
+
+
+        
+
+        
+
     }
 }

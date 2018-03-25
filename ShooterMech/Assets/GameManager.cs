@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour {
         if (amountBalls >= 3)
         {
             Debug.Log("winnah winnah chicka dinna");
+            WinGame();
         }
     }
 
@@ -30,6 +31,10 @@ public class GameManager : MonoBehaviour {
     {
         SceneManager.LoadScene("StartMenu");
         Debug.Log("Game Over");
+    }
+    void WinGame()
+    {
+        SceneManager.LoadScene("StartMenu");
     }
 
 }
