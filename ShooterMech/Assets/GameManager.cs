@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour {
     }
     void WinGame()
     {
-        SceneManager.LoadScene("StartMenu");
+        SceneManager.LoadScene("WinScreen");
     }
 
 }
