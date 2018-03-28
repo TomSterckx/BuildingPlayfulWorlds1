@@ -26,6 +26,11 @@ public class Grenade : MonoBehaviour {
             hasExploded = true;
         }
 	}
+    private void OnCollisionEnter(Collision collision)
+    {
+        Explode();
+        hasExploded = true;
+    }
     void Explode()
     {
         
@@ -47,7 +52,7 @@ public class Grenade : MonoBehaviour {
             
             if (target != null)
             {
-                target.TakeDamage(5 * damage / multiplier);
+                target.TakeDamage(35 * damage / multiplier);
               
                 
             }
