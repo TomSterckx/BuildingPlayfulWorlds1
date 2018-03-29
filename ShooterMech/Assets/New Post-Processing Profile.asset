@@ -159,8 +159,8 @@ MonoBehaviour:
               outSlope: 0.58775276
               tangentMode: 0
             - serializedVersion: 2
-              time: 0.21398304
-              value: 0.15044248
+              time: 0.22245763
+              value: 0.09292036
               inSlope: 0.9146389
               outSlope: 0.9146389
               tangentMode: 0
@@ -314,7 +314,7 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       spectralTexture: {fileID: 0}
-      intensity: 0.5
+      intensity: 0.3
   grain:
     m_Enabled: 1
     m_Settings:
