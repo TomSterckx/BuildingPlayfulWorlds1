@@ -31,7 +31,7 @@ MonoBehaviour:
   antialiasing:
     m_Enabled: 1
     m_Settings:
-      method: 0
+      method: 1
       fxaaSettings:
         preset: 4
       taaSettings:
@@ -83,7 +83,7 @@ MonoBehaviour:
       sampleCount: 20
       frameBlending: 0
   eyeAdaptation:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       lowPercent: 1
       highPercent: 95
@@ -100,8 +100,8 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 0.75
-        threshold: 1.55
+        intensity: 0.3
+        threshold: 2
         softKnee: 0.382
         radius: 2.1
         antiFlicker: 0
@@ -134,9 +134,9 @@ MonoBehaviour:
       colorWheels:
         mode: 1
         log:
-          slope: {r: 1, g: 0.21839117, b: 0.18636972, a: 0}
-          power: {r: 0.90505826, g: 1, b: 0.59938276, a: 0}
-          offset: {r: 0.4251336, g: 0.5745096, b: 1, a: 0}
+          slope: {r: 1, g: 0.5865963, b: 0.5545536, a: 0}
+          power: {r: 1, g: 0.997933, b: 0.7858379, a: 0}
+          offset: {r: 0.78847706, g: 0.88122976, b: 1, a: 0}
         linear:
           lift: {r: 0, g: 0, b: 0, a: 0}
           gamma: {r: 0, g: 0, b: 0, a: 0}
@@ -314,7 +314,7 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       spectralTexture: {fileID: 0}
-      intensity: 1
+      intensity: 0.5
   grain:
     m_Enabled: 1
     m_Settings:

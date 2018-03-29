@@ -306,7 +306,7 @@ MonoBehaviour:
   damage: 50
   explosionEffect: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b,
     type: 2}
-  radius: 15
+  radius: 25
   explosionForce: 1000
   audioclip: {fileID: 0}
 --- !u!136 &136740366435898560

@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour {
 
     void Restart()
     {
-        SceneManager.LoadScene("StartMenu");
+        SceneManager.LoadScene("DeathScreen");
         Debug.Log("Game Over");
     }
     void WinGame()

@@ -6,12 +6,21 @@ public class GrenadeThrower : MonoBehaviour {
 
     public float throwForce = 30f;
     public GameObject grenadePrefab;
+    public int maxAmmo = 10;
+    public int currentAmmo = 10;
 
-	// Update is called once per frame
-	void Update () {
-		if (Input.GetMouseButtonDown(1))
+    void Start()
+    {
+        if (currentAmmo == -1)
+        { currentAmmo = maxAmmo; }
+    }
+    // Update is called once per frame
+    void Update () {
+		if (Input.GetMouseButtonDown(1) && currentAmmo >= 1)
         {
             ThrowGrenade();
+            currentAmmo--;
+            Debug.Log("Kipje");
         }
 	}
     void ThrowGrenade()
