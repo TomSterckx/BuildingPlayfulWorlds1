@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour {
     }
     void WinGame()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("WinScreen");
     }
 
