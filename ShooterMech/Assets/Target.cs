@@ -19,8 +19,9 @@ public class Target : MonoBehaviour {
         {
             FindObjectOfType<GameManager>().amountBalls++;
         }
-        Destroy(gameObject);
+        
         Instantiate(explosionEffect, transform.position, transform.rotation);
+        Destroy(gameObject);
 
 
 
