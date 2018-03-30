@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public float numEnemies = 25;
+    public float numEnemies = 50;
     public GameObject Lightningorbprefab;
     public Vector3 center;
     public Vector3 size;
